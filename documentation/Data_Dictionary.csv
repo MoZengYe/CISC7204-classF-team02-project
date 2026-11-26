@@ -1,0 +1,29 @@
+field,definition,unit,source,transformation,notes
+month,First day of the calendar month used as the monthly timestamp,date,DSEC monthly visitor API,Parsed from DSEC periodString and normalised to YYYY-MM-01,All monthly joins use this field
+year,Calendar year of the observation,year,Derived from month,month.dt.year,Used for annual aggregation and faceting
+month_number,Calendar month number from 1 to 12,month number,Derived from month,month.dt.month,Used for seasonal profiles and month matching
+visitor_arrivals,Monthly visitor arrivals,persons per month,DSEC monthly visitor API,Cast to integer and checked for positivity,No values imputed or interpolated
+phase,Analytical phase label,category,Derived from year,2008-2019 Growth and Baseline; 2020-2022 Disruption; 2023-Jul 2026 Recovery,Descriptive grouping only
+yoy_pct,Year-over-year growth in visitor arrivals,percent,Derived from visitor_arrivals,(current month / same month previous year - 1) x 100,NaN for the first 12 months by construction
+recovery_index,Monthly arrivals relative to the same calendar month in 2019,index where 2019 same month = 100,Derived from visitor_arrivals,current month / matching 2019 month x 100,Not a measure of spending or economic welfare
+hotel_guests,Guests of hotel establishments,persons per month,DSEC monthly hotel-guest API,Cast to integer and aligned to the same monthly grid,Not equivalent to unique visitors or all overnight visitors
+visitor_arrivals_wb,Annual international visitor arrivals,persons per year,World Bank ST.INT.ARVL,Extracted from the World Bank JSON API response,Observed 1995-2020 only
+gdp_pc_usd,GDP per capita in current US dollars,current US$ per person per year,World Bank NY.GDP.PCAP.CD,Extracted from the World Bank JSON API response,Observed 1995-2025
+visitor_arrivals_dsec,Annual sum of DSEC monthly visitor arrivals,persons per year,Derived from DSEC monthly series,Sum of monthly visitor_arrivals by year,2026 is a partial-year sum
+dsec_partial_year,Flag indicating a DSEC annual total from an incomplete year,boolean,Derived from year,True for 2026 and False otherwise,Used to prevent treating 2026 as a complete year
+overlap_wb,Flag indicating both World Bank arrivals and GDP per capita are present,boolean,Derived from annual table,visitor_arrivals_wb.notna() AND gdp_pc_usd.notna(),The regression uses only rows where this is True
+market,Source-market category used in the composition analysis,category,DSEC 2024 and 2025 annual releases,Top eight 2025 markets plus Other residual,Other is a group and not a single market
+arrivals_2024,Visitor arrivals from the market in 2024,persons per year,DSEC 2024 annual release,Extracted from the official release,Top-eight selection is based on 2025
+arrivals_2025,Visitor arrivals from the market in 2025,persons per year,DSEC 2025 annual release,Extracted from the official release,Latest complete year in the project
+share_2024_pct,Market share of total 2024 visitor arrivals,percent,Derived from arrivals_2024,arrivals_2024 / total 2024 arrivals x 100,Shares include the Other residual
+share_2025_pct,Market share of total 2025 visitor arrivals,percent,Derived from arrivals_2025,arrivals_2025 / total 2025 arrivals x 100,Shares include the Other residual
+yoy_pct,Year-over-year change in arrivals by source market,percent,Derived from source-market table,(arrivals_2025 / arrivals_2024 - 1) x 100,Descriptive growth rate
+is_top8,Flag indicating a named top-eight source market,boolean,Derived from market,True for the top eight and False for Other residual,Used to distinguish named markets from the residual
+mode,Entry transport mode,category,MGTO Tourism Highlights Jan-Dec 2025,Assigned from the official checkpoint grouping,Land Sea or Air
+checkpoint,Named entry checkpoint,category,MGTO Tourism Highlights Jan-Dec 2025,Extracted from the official checkpoint table,Visitor arrivals rather than all-person crossings
+visitor_arrivals_2025,Visitor arrivals by checkpoint in 2025,persons per year,MGTO Tourism Highlights Jan-Dec 2025,Extracted and checked against the published total of 40069360,Only source with true visitor arrivals by individual checkpoint
+share_2025_pct,Checkpoint share of total 2025 visitor arrivals,percent,Derived from entry-point table,visitor_arrivals_2025 / total 2025 visitor arrivals x 100,Shares sum to 100 subject to rounding
+DISTRICT_EN,English district name,category,DSEC district visitor data,Read from the raw Excel workbook,Display label
+DISTRICT_PT,Portuguese district name,category,DSEC district visitor data,Read from the raw Excel workbook,Used for matching to statistics-zone GeoJSON
+visitor_person_times_2026_jan_jul,Recorded visitor person-times by district,person-times,DSEC district visitor data,Summed over Overall origin and months 1-7 of 2026,One person can contribute multiple person-times
+share_2026_jan_jul_pct,District share of recorded visitor person-times,percent,Derived from district table,district person-times / total person-times x 100,Not a unique-visitor share

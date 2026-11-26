@@ -1,0 +1,58 @@
+{
+  "Border Gate": {
+    "query": "Portas do Cerco, Macau",
+    "lat": 22.2159386,
+    "lon": 113.5492052,
+    "display_name": "關閘 Portas do Cerco, 關閘廣場 Praça das Portas do Cerco, 關閘 Portas do Cerco, 花地瑪堂區 Nossa Senhora de Fátima, 澳門 Macau, 519020, 中国",
+    "osm_type": "node",
+    "osm_id": 1758263006
+  },
+  "Hengqin Port": {
+    "query": "Hengqin Port, Macau",
+    "lat": 22.1405453,
+    "lon": 113.5429628,
+    "display_name": "横琴口岸, 福临道, 横琴镇, 横琴粤澳深度合作区, 香洲区, 珠海市, 广东省, 519000, 中国",
+    "osm_type": "way",
+    "osm_id": 741158507
+  },
+  "HZMB Macao Port": {
+    "query": "Hong Kong-Zhuhai-Macao Bridge Macau Port",
+    "lat": 22.2155289,
+    "lon": 113.5889291,
+    "display_name": "港珠澳大桥, 港珠澳大桥珠海公路口岸, 拱北街道, 香洲区, 珠海市, 广东省, 519000, 中国",
+    "osm_type": "way",
+    "osm_id": 1080261783
+  },
+  "Outer Harbour Ferry Terminal": {
+    "query": "Outer Harbour Ferry Terminal, Macau",
+    "lat": 22.1974632,
+    "lon": 113.5574774,
+    "display_name": "外港碼頭 Terminal Marítimo de Passageiros do Porto Exterior, 海港前地行車天橋 Viaduto do Largo do Terminal Marítimo, 新口岸填海區 Zona de Aterros do Porto Exterior, 大堂區 Sé, 澳門 Macau, 519020, 中国",
+    "osm_type": "node",
+    "osm_id": 5949397453
+  },
+  "Taipa Ferry Terminal": {
+    "query": "Taipa Ferry Terminal, Macau",
+    "lat": 22.1630091,
+    "lon": 113.5738656,
+    "display_name": "氹仔碼頭 Terminal Marítimo da Taipa, 北安港大馬路 Avenida do Porto de Pac On, 北安 Pac On, 嘉模堂區 Nossa Senhora do Carmo, 氹仔 Taipa, 澳門 Macau, 999078, 中国",
+    "osm_type": "node",
+    "osm_id": 7051569810
+  },
+  "Inner Harbour Ferry Terminal": {
+    "query": "Inner Harbour Ferry Terminal, Macau",
+    "lat": 22.1948097,
+    "lon": 113.5353768,
+    "display_name": "內港客運碼頭 Terminal Marítimo de Passageiros do Porto Interior, 火船頭街 Rua das Lorchas, 司打口 Praca Ponte Horta, 風順堂區 São Lourenço, 澳門 Macau, 519020, 中国",
+    "osm_type": "way",
+    "osm_id": 314945766
+  },
+  "Macau International Airport": {
+    "query": "Macau International Airport",
+    "lat": 22.149929,
+    "lon": 113.5893607,
+    "display_name": "澳門國際機場 Aeroporto Internacional de Macau, 航空圓形地 Rotunda da Aeronáutica, 路氹填海區 Zona do Aterro de Cotai, 澳門 Macau, 999078, 中国",
+    "osm_type": "relation",
+    "osm_id": 2589459
+  }
+}

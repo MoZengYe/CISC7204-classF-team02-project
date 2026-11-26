@@ -1,0 +1,50 @@
+{
+  "data": {
+    "status": null,
+    "title": "出入境人數☯出入境人數☯Registos de entradas e saídas☯Border Crossing Statistics",
+    "info": {
+      "openType": 0,
+      "deptName": "治安警察局,治安警察局,CPSP,CPSP",
+      "theme": [
+        "公共安全及出入境,公共安全及出入境,Segurança Pública e Migração,Public Safety & Entry-Exit"
+      ],
+      "description": "出入境人數☯出入境人數☯Registos de entradas e saídas☯Border Crossing Statistics",
+      "updateFrequency": "",
+      "frequency": 5,
+      "downloadTimes": 676,
+      "visits": 649,
+      "updateTime": "2026-02-06 15:08:00",
+      "publishTime": "2022-01-20 15:55:41",
+      "mainField": "undefined☯undefined☯undefined☯undefined",
+      "dataDirField": "[]",
+      "dataFormat": "XLSX",
+      "telePhone": "87905437",
+      "email": "ksleung@fsm.gov.mo"
+    },
+    "file": [
+      {
+        "fileId": 1443,
+        "fileName": "各入境事務站出入境人數.xlsx",
+        "suffix": "xlsx",
+        "openName": ""
+      },
+      {
+        "fileId": 1446,
+        "fileName": "中國居民出入境人數.xlsx",
+        "suffix": "xlsx",
+        "openName": ""
+      },
+      {
+        "fileId": 1440,
+        "fileName": "各地居民出入境人數.xlsx",
+        "suffix": "xlsx",
+        "openName": ""
+      }
+    ],
+    "apis": [],
+    "appCode": null,
+    "mainField": "undefined☯undefined☯undefined☯undefined",
+    "dataDirField": "[]"
+  },
+  "code": 0
+}

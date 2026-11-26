@@ -1,0 +1,9 @@
+.DS_Store
+.vscode/
+.workbuddy/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+项目汇报演示/.cache/
+项目汇报演示/.slidep/
+GitHub仓库链接.txt
